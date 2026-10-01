@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Plan du site NovaSpace : retrouvez toutes les pages du site, des planètes du système solaire aux informations pratiques."
+        />
+        <title>Plan du site — NovaSpace</title>
+        <link rel="stylesheet" href="/src/style.css" />
+        <link rel="icon" type="image/svg+xml" href="/images/earth.svg" />
+    </head>
+    <body class="bg-space text-ink antialiased">
+        <a href="#contenu" class="lien-evitement">Aller au contenu principal</a>
+        <site-header></site-header>
+
+        <main
+            id="contenu"
+            tabindex="-1"
+            class="mx-auto max-w-6xl px-6 pb-16 pt-12 sm:px-10 sm:pb-24 sm:pt-20"
+        >
+            <p class="mb-6 text-sm font-semibold uppercase tracking-widest text-muted">NovaSpace · Navigation</p>
+            <h1 class="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">Plan du site<span class="text-earth">.</span></h1>
+            <p class="mt-6 max-w-xl text-lg leading-relaxed text-muted">Retrouvez ici toutes les pages de NovaSpace, regroupées par thème.</p>
+
+            <nav aria-label="Plan du site" class="mt-12">
+                <ul class="grid gap-6 lg:grid-cols-[1fr_2fr]">
+                    <li class="plan__groupe">
+                        <h2 class="plan__titre">Pages principales</h2>
+                        <ul class="plan__liste">
+                            <li><a href="/" class="plan__lien">Accueil</a></li>
+                            <li><a href="/src/pages/contact.html" class="plan__lien">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li class="plan__groupe lg:row-span-2">
+                        <h2 class="plan__titre">Les planètes</h2>
+                        <ul class="plan__liste sm:grid-cols-2">
+                                <li>
+                                    <a href="/src/pages/terre.html" class="plan__lien"><img src="/images/earth.svg" alt="" width="320" height="320" class="plan__pastille">La Terre</a>
+                                </li>
+                                <li>
+                                    <a href="/src/pages/mars.html" class="plan__lien"><span class="plan__pastille" style="background-color: #c48368" aria-hidden="true"></span>Mars</a>
+                                </li>
+                                <li>
+                                    <a href="/src/pages/jupiter.html" class="plan__lien"><img src="/images/jupiter.svg" alt="" width="320" height="320" class="plan__pastille">Jupiter</a>
+                                </li>
+                                <li>
+                                    <a href="/src/pages/uranus.html" class="plan__lien"><span class="plan__pastille" style="background-color: #94c5cc" aria-hidden="true"></span>Uranus</a>
+                                </li>
+                                <li>
+                                    <a href="/src/pages/mercure.html" class="plan__lien"><span class="plan__pastille" style="background-color: #aaa49d" aria-hidden="true"></span>Mercure</a>
+                                </li>
+                                <li>
+                                    <a href="/src/pages/venus.html" class="plan__lien"><span class="plan__pastille" style="background-color: #ddbc8b" aria-hidden="true"></span>Vénus</a>
+                                </li>
+                                <li>
+                                    <a href="/src/pages/saturne.html" class="plan__lien"><span class="plan__pastille" style="background-color: #d0b68e" aria-hidden="true"></span>Saturne</a>
+                                </li>
+                                <li>
+                                    <a href="/src/pages/neptune.html" class="plan__lien"><span class="plan__pastille" style="background-color: #668cbf" aria-hidden="true"></span>Neptune</a>
+                                </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </main>
+        <site-footer></site-footer>
+
+        <script type="module" src="/src/main.js"></script>
+    </body>
+</html>
