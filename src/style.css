@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --color-space: #121212;
@@ -11,41 +11,110 @@
 }
 
 @layer base {
-  html { color-scheme: dark; }
-  body { font-family: ui-sans-serif, system-ui, sans-serif; }
-  main { overflow-wrap: anywhere; }
-  a:focus-visible { outline: 3px solid #f3d990; outline-offset: 6px; }
+  html {
+    color-scheme: dark;
+  }
+  body {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+  }
+  main {
+    overflow-wrap: anywhere;
+  }
+  a:focus-visible {
+    outline: 3px solid #f3d990;
+    outline-offset: 6px;
+  }
 }
 
 /* Les illustrations restent indépendantes des panneaux de texte opaques. */
 @layer components {
-  .planet-card { --planet-glow: #295b70; }
-  .planet-card-jupiter { --planet-glow: #704529; }
-  .planet-card:hover, .planet-card:focus-visible { border-color: var(--color-earth); }
-  .planet-card-jupiter:hover, .planet-card-jupiter:focus-visible { border-color: var(--color-jupiter); }
+  .planet-card {
+    --planet-glow: #295b70;
+  }
+  .planet-card-jupiter {
+    --planet-glow: #704529;
+  }
+  .planet-card:hover,
+  .planet-card:focus-visible {
+    border-color: var(--color-earth);
+  }
+  .planet-card-jupiter:hover,
+  .planet-card-jupiter:focus-visible {
+    border-color: var(--color-jupiter);
+  }
   .planet-stage {
     min-height: 13.5rem;
-    background: radial-gradient(ellipse at 50% 25%, var(--planet-glow), transparent 72%);
+    background: radial-gradient(
+      ellipse at 50% 25%,
+      var(--planet-glow),
+      transparent 72%
+    );
   }
-  .planet-image { top: -2.5rem; z-index: 1; }
-  .landscape { position: relative; }
+  .planet-image {
+    top: -2.5rem;
+    z-index: 1;
+  }
+  .landscape {
+    position: relative;
+  }
   .landscape::before {
-    content: ""; position: absolute; inset: 0; pointer-events: none;
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
     background: linear-gradient(var(--color-panel), transparent 65%);
   }
   .system-planet {
-    display: block; width: 3rem; aspect-ratio: 1; border-radius: 50%;
+    display: block;
+    width: 3rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
     box-shadow: inset -12px -6px 16px #12121280;
   }
-  .hero-earth { mask-image: radial-gradient(ellipse, #121212 48%, transparent 72%); }
+  .hero-earth {
+    mask-image: radial-gradient(ellipse, #121212 48%, transparent 72%);
+  }
+  .hero-jupiter {
+    filter: drop-shadow(0 0 60px rgba(242, 194, 140, 0.35))
+      drop-shadow(0 0 120px rgba(242, 194, 140, 0.15));
+  }
+  .lien-evitement {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    background: var(--color-jupiter);
+    color: var(--color-space);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    z-index: 100;
+  }
+  .lien-evitement:focus {
+    left: 1rem;
+    top: 1rem;
+    width: auto;
+    height: auto;
+    overflow: visible;
+  }
 }
 
 /* Aucun mouvement nécessaire ; seuls les changements de couleurs sont animés. */
 @media (prefers-reduced-motion: no-preference) {
-  a { transition: background-color 160ms ease, border-color 160ms ease; }
+  a {
+    transition:
+      background-color 160ms ease,
+      border-color 160ms ease;
+  }
 }
 
 @media (forced-colors: active) {
-  a:focus-visible { outline-color: Highlight; }
-  .planet-card { border-color: LinkText; }
+  a:focus-visible {
+    outline-color: Highlight;
+  }
+  .planet-card {
+    border-color: LinkText;
+  }
 }

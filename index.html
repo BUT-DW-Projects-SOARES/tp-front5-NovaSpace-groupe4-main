@@ -9,7 +9,8 @@
     <link rel="icon" type="image/svg+xml" href="/images/earth.svg" />
   </head>
   <body class="bg-space text-ink antialiased">
-    <main id="contenu" class="mx-auto max-w-6xl px-6 pb-16 pt-12 sm:px-10 sm:pb-24 sm:pt-20">
+    <a href="#contenu" class="lien-evitement">Aller au contenu principal</a>
+    <main id="contenu" tabindex="-1" class="mx-auto max-w-6xl px-6 pb-16 pt-12 sm:px-10 sm:pb-24 sm:pt-20">
       <section class="relative border-b border-line pb-12 sm:pb-16" aria-labelledby="intro-titre">
         <p class="mb-6 text-sm font-semibold uppercase tracking-widest text-muted">NovaSpace · À la découverte de l’espace</p>
         <div class="grid items-center gap-8 lg:grid-cols-[1.5fr_1fr]">
@@ -48,7 +49,7 @@
 
         <div class="mt-16 grid gap-16 md:grid-cols-2 md:gap-8">
           <article class="min-w-0">
-            <a href="terre.html" class="planet-card planet-card-earth relative isolate flex h-full flex-col rounded-3xl border border-line bg-panel" aria-labelledby="terre-lien">
+            <a href="src/pages/terre.html" class="planet-card planet-card-earth relative isolate flex h-full flex-col rounded-3xl border border-line bg-panel" aria-labelledby="terre-lien">
               <!-- Visuel provisoire décoratif : remplacer le fichier et conserver alt="". -->
               <div class="planet-stage relative rounded-t-3xl" aria-hidden="true">
                 <img src="/images/earth.svg" alt="" width="320" height="320" class="planet-image absolute left-1/2 w-56 max-w-[80%] -translate-x-1/2 sm:w-64" />
@@ -66,7 +67,7 @@
           </article>
 
           <article class="min-w-0">
-            <a href="jupiter.html" class="planet-card planet-card-jupiter relative isolate flex h-full flex-col rounded-3xl border border-line bg-panel" aria-labelledby="jupiter-lien">
+            <a href="src/pages/jupiter.html" class="planet-card planet-card-jupiter relative isolate flex h-full flex-col rounded-3xl border border-line bg-panel" aria-labelledby="jupiter-lien">
               <!-- Même structure que la Terre ; cette illustration n’ajoute pas d’information. -->
               <div class="planet-stage relative rounded-t-3xl" aria-hidden="true">
                 <img src="/images/jupiter.svg" alt="" width="320" height="320" class="planet-image absolute left-1/2 w-56 max-w-[80%] -translate-x-1/2 sm:w-64" />
@@ -118,7 +119,7 @@
             <p class="mt-4 leading-relaxed text-muted">Jupiter est principalement composée d’hydrogène et d’hélium. Elle ne possède pas de surface solide sur laquelle marcher : le paysage de sa carte est une évocation artistique de ses nuages.</p>
           </article>
         </div>
-        <p class="mt-6 text-sm leading-relaxed text-muted">Pour approfondir : <a href="https://science.nasa.gov/solar-system/planets/" class="inline-block rounded-sm py-3 font-semibold text-earth underline underline-offset-4">les planètes du système solaire sur le site de la NASA (en anglais)</a>.</p>
+        <p class="mt-6 text-sm leading-relaxed text-muted">Pour approfondir : <a href="https://science.nasa.gov/solar-system/planets/" lang="en" class="inline-block rounded-sm py-3 font-semibold text-earth underline underline-offset-4">les planètes du système solaire sur le site de la NASA (en anglais)</a>.</p>
       </section>
     </main>
   </body>
