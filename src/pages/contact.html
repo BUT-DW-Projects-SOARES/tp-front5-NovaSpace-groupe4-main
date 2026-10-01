@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contactez l’équipe NovaSpace : posez une question sur les planètes, signalez une erreur ou une difficulté d’accessibilité." />
+    <title>Contact — NovaSpace</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="icon" type="image/svg+xml" href="/images/earth.svg" />
+  </head>
+  <body class="bg-space text-ink antialiased">
+    <a href="#contenu" class="lien-evitement">Aller au contenu principal</a>
+    <site-header></site-header>
+
+    <main id="contenu" tabindex="-1" class="mx-auto max-w-6xl px-6 pb-16 pt-12 sm:px-10 sm:pb-24 sm:pt-20">
+      <div class="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
+        <section class="lg:sticky lg:top-32 lg:self-start" aria-labelledby="contact-titre">
+          <p class="mb-6 text-sm font-semibold uppercase tracking-widest text-muted">NovaSpace · Contact</p>
+          <h1 id="contact-titre" class="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">Contactez l’équipe de NovaSpace<span class="text-earth">.</span></h1>
+          <p class="mt-6 max-w-xl text-lg leading-relaxed text-muted">Vous avez une question sur les planètes, une remarque sur un contenu ou une difficulté pour utiliser le site ? Vous pouvez nous écrire à l’aide de ce formulaire.</p>
+
+          <div class="mt-8 rounded-2xl border border-line p-6">
+            <p class="text-sm font-semibold text-jupiter">Accessibilité</p>
+            <p class="mt-3 leading-relaxed text-muted">Pour signaler un problème d’accessibilité, indiquez si possible la page concernée et ce qui vous a empêché de poursuivre votre navigation.</p>
+          </div>
+        </section>
+
+        <section class="rounded-3xl border border-line bg-panel p-6 sm:p-10" aria-labelledby="titre-formulaire">
+          <h2 id="titre-formulaire" class="text-2xl font-semibold tracking-tight sm:text-3xl">Envoyer un message</h2>
+
+          <form action="/contact" method="post" aria-labelledby="titre-formulaire" class="mt-6 flex flex-col gap-6">
+            <p class="text-sm text-muted">Les champs portant la mention « obligatoire » doivent être renseignés.</p>
+
+            <div class="champ">
+              <label for="nom">Nom ou pseudonyme <span class="champ__mention">— facultatif</span></label>
+              <p id="aide-nom" class="champ__aide">Comment souhaitez-vous que nous vous appelions ?</p>
+              <input type="text" id="nom" name="nom" autocomplete="name" aria-describedby="aide-nom">
+            </div>
+
+            <div class="champ">
+              <label for="email">Adresse e-mail <span class="champ__mention">— obligatoire</span></label>
+              <p id="aide-email" class="champ__aide">Indiquez l’adresse à laquelle vous souhaitez recevoir une réponse.</p>
+              <p id="format-email" class="champ__aide">Exemple de format : nom@exemple.fr.</p>
+              <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="aide-email format-email">
+            </div>
+
+            <div class="champ">
+              <label for="sujet">Sujet <span class="champ__mention">— obligatoire</span></label>
+              <select id="sujet" name="sujet" required>
+                <option value="">Choisissez un sujet</option>
+                <option value="systeme-solaire">Question sur le système solaire</option>
+                <option value="remarque">Remarque ou correction</option>
+                <option value="accessibilite">Difficulté d’accessibilité</option>
+                <option value="autre">Autre demande</option>
+              </select>
+            </div>
+
+            <div class="champ">
+              <label for="message">Message <span class="champ__mention">— obligatoire</span></label>
+              <p id="aide-message" class="champ__aide">Décrivez votre question ou votre remarque. Si elle concerne une page précise, indiquez son titre.</p>
+              <textarea id="message" name="message" rows="8" required aria-describedby="aide-message"></textarea>
+            </div>
+
+            <button type="submit" class="bouton-principal self-start">Envoyer le message <span aria-hidden="true">→</span></button>
+          </form>
+        </section>
+      </div>
+    </main>
+    <site-footer></site-footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

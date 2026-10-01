@@ -1,120 +1,262 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
-  --color-space: #121212;
-  --color-panel: #1b2026;
-  --color-ink: #e0e0e0;
-  --color-muted: #b8c1cc;
-  --color-line: #485260;
-  --color-earth: #8ed9e8;
-  --color-jupiter: #f2c28c;
+    --color-space: #121212;
+    --color-panel: #1b2026;
+    --color-ink: #e0e0e0;
+    --color-muted: #b8c1cc;
+    --color-line: #485260;
+    --color-earth: #8ed9e8;
+    --color-jupiter: #f2c28c;
 }
 
 @layer base {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    font-family: ui-sans-serif, system-ui, sans-serif;
-  }
-  main {
-    overflow-wrap: anywhere;
-  }
-  a:focus-visible {
-    outline: 3px solid #f3d990;
-    outline-offset: 6px;
-  }
+    html {
+        color-scheme: dark;
+    }
+    body {
+        font-family: ui-sans-serif, system-ui, sans-serif;
+    }
+    main {
+        overflow-wrap: anywhere;
+    }
+    a:focus-visible {
+        outline: 3px solid #f3d990;
+        outline-offset: 6px;
+    }
+    button:focus-visible,
+    .header__search:focus-within {
+        outline: 3px solid #f3d990;
+        outline-offset: 2px;
+    }
 }
 
 /* Les illustrations restent indépendantes des panneaux de texte opaques. */
 @layer components {
-  .planet-card {
-    --planet-glow: #295b70;
-  }
-  .planet-card-jupiter {
-    --planet-glow: #704529;
-  }
-  .planet-card:hover,
-  .planet-card:focus-visible {
-    border-color: var(--color-earth);
-  }
-  .planet-card-jupiter:hover,
-  .planet-card-jupiter:focus-visible {
-    border-color: var(--color-jupiter);
-  }
-  .planet-stage {
-    min-height: 13.5rem;
-    background: radial-gradient(
-      ellipse at 50% 25%,
-      var(--planet-glow),
-      transparent 72%
-    );
-  }
-  .planet-image {
-    top: -2.5rem;
-    z-index: 1;
-  }
-  .landscape {
-    position: relative;
-  }
-  .landscape::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background: linear-gradient(var(--color-panel), transparent 65%);
-  }
-  .system-planet {
-    display: block;
-    width: 3rem;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    box-shadow: inset -12px -6px 16px #12121280;
-  }
-  .hero-earth {
-    mask-image: radial-gradient(ellipse, #121212 48%, transparent 72%);
-  }
-  .hero-jupiter {
-    filter: drop-shadow(0 0 60px rgba(242, 194, 140, 0.35))
-      drop-shadow(0 0 120px rgba(242, 194, 140, 0.15));
-  }
-  .lien-evitement {
-    position: absolute;
-    left: -9999px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    background: var(--color-jupiter);
-    color: var(--color-space);
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    font-weight: 600;
-    z-index: 100;
-  }
-  .lien-evitement:focus {
-    left: 1rem;
-    top: 1rem;
-    width: auto;
-    height: auto;
-    overflow: visible;
-  }
+    .planet-card {
+        --planet-glow: #295b70;
+    }
+    .planet-card-jupiter {
+        --planet-glow: #704529;
+    }
+    .planet-card:hover,
+    .planet-card:focus-visible {
+        border-color: var(--color-earth);
+    }
+    .planet-card-jupiter:hover,
+    .planet-card-jupiter:focus-visible {
+        border-color: var(--color-jupiter);
+    }
+    .planet-stage {
+        min-height: 13.5rem;
+        background: radial-gradient(
+            ellipse at 50% 25%,
+            var(--planet-glow),
+            transparent 72%
+        );
+    }
+    .planet-image {
+        top: -2.5rem;
+        z-index: 1;
+    }
+    .landscape {
+        position: relative;
+    }
+    .landscape::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient(var(--color-panel), transparent 65%);
+    }
+    .system-planet {
+        display: block;
+        width: 3rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        box-shadow: inset -12px -6px 16px #12121280;
+    }
+    .hero-earth {
+        mask-image: radial-gradient(ellipse, #121212 48%, transparent 72%);
+    }
+    .hero-jupiter {
+        filter: drop-shadow(0 0 60px rgba(242, 194, 140, 0.35))
+            drop-shadow(0 0 120px rgba(242, 194, 140, 0.15));
+    }
+    .lien-evitement {
+        position: absolute;
+        left: -9999px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        background: var(--color-jupiter);
+        color: var(--color-space);
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        z-index: 100;
+    }
+    .lien-evitement:focus {
+        left: 1rem;
+        top: 1rem;
+        width: auto;
+        height: auto;
+        overflow: visible;
+    }
+
+    /* ─── Header ─── */
+    .header {
+        @apply sticky top-0 z-50 border-b border-line bg-space/90 backdrop-blur;
+    }
+    .header__logo {
+        @apply flex items-center gap-3 rounded-full text-lg font-semibold tracking-tight;
+    }
+    .header__item {
+        @apply relative;
+    }
+    .header__toggle {
+        @apply inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-full px-4 font-semibold hover:bg-panel;
+    }
+    .header__lien {
+        @apply inline-flex min-h-11 items-center rounded-full px-4 font-semibold hover:bg-panel hover:text-earth;
+    }
+    .header__toggle[aria-expanded="true"] {
+        @apply bg-panel text-earth;
+    }
+    .header__chevron {
+        @apply text-sm text-muted;
+    }
+    .header__toggle[aria-expanded="true"] .header__chevron {
+        rotate: 180deg;
+    }
+    .header__submenu {
+        @apply absolute left-0 top-[calc(100%+0.5rem)] hidden w-72 grid-cols-2 gap-1 rounded-2xl border border-line bg-panel p-2 shadow-2xl shadow-black/50;
+    }
+    /* Pont invisible : le survol ne se perd pas entre le bouton et le sous-menu. */
+    .header__submenu::before {
+        content: "";
+        @apply absolute inset-x-0 -top-2 h-2;
+    }
+    .header__submenu a {
+        @apply flex min-h-11 items-center rounded-xl px-3 text-muted hover:bg-space hover:text-earth;
+    }
+    .header__item:hover > .header__submenu,
+    .header__toggle[aria-expanded="true"] + .header__submenu {
+        @apply grid;
+    }
+    .header__search {
+        @apply flex min-h-11 grow items-center rounded-full border border-line bg-panel p-1 focus-within:border-earth sm:grow-0;
+    }
+    .header__search input {
+        @apply w-full min-w-0 bg-transparent px-4 text-ink placeholder:text-muted focus-visible:outline-none sm:w-44;
+    }
+    .header__search button {
+        @apply min-h-9 shrink-0 cursor-pointer rounded-full bg-earth px-4 font-semibold text-space hover:bg-ink;
+    }
+
+    /* ─── Footer ─── */
+    .footer {
+        @apply border-t border-line bg-panel;
+    }
+    .footer__liens {
+        @apply flex flex-wrap gap-x-2 gap-y-1;
+    }
+    .footer__liens a {
+        @apply inline-flex min-h-11 items-center rounded-full px-4 font-semibold text-muted underline decoration-1 underline-offset-4 hover:bg-space hover:text-earth;
+    }
+
+    /* ─── Plan du site ─── */
+    .plan__groupe {
+        @apply rounded-3xl border border-line bg-panel p-6 sm:p-8;
+    }
+    .plan__titre {
+        @apply text-sm font-semibold uppercase tracking-[0.2em] text-muted;
+    }
+    .plan__liste {
+        @apply mt-4 grid gap-2;
+    }
+    .plan__lien {
+        @apply flex min-h-12 items-center gap-4 rounded-xl border border-transparent px-4 py-2 font-semibold hover:border-line hover:bg-space hover:text-earth;
+    }
+    .plan__lien[aria-current="page"] {
+        @apply border-earth text-earth;
+    }
+    .plan__pastille {
+        @apply block h-7 w-7 shrink-0 rounded-full;
+        box-shadow: inset -6px -3px 8px #12121280;
+    }
+    img.plan__pastille {
+        box-shadow: none;
+    }
+
+    /* ─── Formulaires ─── */
+    .champ {
+        @apply flex flex-col gap-2;
+    }
+    .champ label {
+        @apply font-semibold;
+    }
+    .champ__mention {
+        @apply font-normal text-muted;
+    }
+    .champ__aide {
+        @apply text-sm leading-relaxed text-muted;
+    }
+    .champ input,
+    .champ select,
+    .champ textarea {
+        @apply mt-1 min-h-12 w-full rounded-xl border border-line bg-space px-4 py-3 text-ink placeholder:text-muted hover:border-muted;
+    }
+    .champ textarea {
+        @apply resize-y leading-relaxed;
+    }
+    .champ input:focus-visible,
+    .champ select:focus-visible,
+    .champ textarea:focus-visible {
+        @apply border-earth;
+        outline: 3px solid #f3d990;
+        outline-offset: 2px;
+    }
+    /* Signalé seulement après interaction, en complément du message natif du navigateur. */
+    .champ :user-invalid {
+        border-color: #f5a3a3;
+    }
+    .bouton-principal {
+        @apply inline-flex min-h-12 cursor-pointer items-center gap-3 rounded-full bg-earth px-6 py-3 font-semibold text-space hover:bg-ink;
+    }
 }
 
 /* Aucun mouvement nécessaire ; seuls les changements de couleurs sont animés. */
 @media (prefers-reduced-motion: no-preference) {
-  a {
-    transition:
-      background-color 160ms ease,
-      border-color 160ms ease;
-  }
+    a,
+    button,
+    .header__search,
+    .champ input,
+    .champ select,
+    .champ textarea {
+        transition:
+            background-color 160ms ease,
+            border-color 160ms ease,
+            color 160ms ease;
+    }
+    .header__chevron {
+        transition: rotate 160ms ease;
+    }
 }
 
 @media (forced-colors: active) {
-  a:focus-visible {
-    outline-color: Highlight;
-  }
-  .planet-card {
-    border-color: LinkText;
-  }
+    a:focus-visible {
+        outline-color: Highlight;
+    }
+    .planet-card {
+        border-color: LinkText;
+    }
+    button:focus-visible,
+    .header__search:focus-within,
+    .champ input:focus-visible,
+    .champ select:focus-visible,
+    .champ textarea:focus-visible {
+        outline-color: Highlight;
+    }
 }
