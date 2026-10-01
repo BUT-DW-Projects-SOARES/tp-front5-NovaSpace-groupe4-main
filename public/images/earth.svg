@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320">
+  <defs>
+    <radialGradient id="ocean" cx="30%" cy="25%" r="75%"><stop stop-color="#6596ad"/><stop offset=".45" stop-color="#246682"/><stop offset="1" stop-color="#102333"/></radialGradient>
+    <radialGradient id="shade" cx="28%" cy="25%" r="78%"><stop offset=".4" stop-color="#121212" stop-opacity="0"/><stop offset="1" stop-color="#121212" stop-opacity=".85"/></radialGradient>
+    <clipPath id="sphere"><circle cx="160" cy="160" r="137"/></clipPath>
+  </defs>
+  <circle cx="160" cy="160" r="140" fill="#8ed9e8" fill-opacity=".12"/>
+  <g clip-path="url(#sphere)">
+    <circle cx="160" cy="160" r="137" fill="url(#ocean)"/>
+    <path d="M62 42 98 28 146 42 155 58 135 78 143 100 122 123 104 117 95 140 76 122 81 104 55 88 46 63ZM120 139 148 149 172 181 162 207 150 224 135 269 117 244 115 210 100 186 105 158ZM210 57 248 51 279 91 269 117 238 125 222 106 195 115 182 98 184 74ZM192 127 222 129 242 152 231 187 211 215 190 203 185 175 174 153ZM259 223 286 215 309 246 282 265 251 251Z" fill="#729887"/>
+    <path d="M65 62Q110 36 156 63M45 100Q84 118 106 96M161 109Q201 80 251 94M93 174Q130 159 178 179M193 224Q226 244 280 219" fill="none" stroke="#d2e0df" stroke-width="12" stroke-linecap="round" opacity=".5"/>
+    <path d="M77 34Q151 9 224 41L210 49 145 51 112 43Z" fill="#d2e0df"/>
+    <circle cx="160" cy="160" r="137" fill="url(#shade)"/>
+  </g>
+</svg>
