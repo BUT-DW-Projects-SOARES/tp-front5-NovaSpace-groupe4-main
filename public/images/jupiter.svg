@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320">
+  <defs>
+    <linearGradient id="clouds" x2="0" y2="1"><stop stop-color="#b79170"/><stop offset=".2" stop-color="#ddc4a4"/><stop offset=".3" stop-color="#a56b49"/><stop offset=".4" stop-color="#e0c7a7"/><stop offset=".54" stop-color="#a86b49"/><stop offset=".66" stop-color="#d6b491"/><stop offset=".8" stop-color="#9c6a4b"/><stop offset="1" stop-color="#c2a181"/></linearGradient>
+    <radialGradient id="shade" cx="30%" cy="25%" r="78%"><stop offset=".3" stop-color="#121212" stop-opacity="0"/><stop offset="1" stop-color="#121212" stop-opacity=".85"/></radialGradient>
+    <clipPath id="sphere"><circle cx="160" cy="160" r="137"/></clipPath>
+  </defs>
+  <circle cx="160" cy="160" r="140" fill="#f2c28c" fill-opacity=".1"/>
+  <g clip-path="url(#sphere)" transform="rotate(-12 160 160)">
+    <circle cx="160" cy="160" r="137" fill="url(#clouds)"/>
+    <g fill="none" stroke-linecap="round">
+      <path d="M14 70Q100 88 170 73T310 79M8 131Q77 119 156 136T311 130M9 208Q77 196 156 214T319 207M24 254Q112 245 195 263T300 254" stroke="#eed9ba" stroke-width="10" opacity=".6"/>
+      <path d="M11 106Q86 98 177 115T311 103M12 171Q85 185 165 175T315 181M25 237Q100 227 187 238T305 231" stroke="#7f4f36" stroke-width="7" opacity=".5"/>
+    </g>
+    <ellipse cx="215" cy="194" rx="36" ry="21" fill="#b97850"/>
+    <ellipse cx="215" cy="194" rx="25" ry="13" fill="#a45c3e"/>
+    <path d="M192 193Q212 181 235 194" fill="none" stroke="#d79d72" stroke-width="4"/>
+  </g>
+  <circle cx="160" cy="160" r="137" fill="url(#shade)"/>
+</svg>

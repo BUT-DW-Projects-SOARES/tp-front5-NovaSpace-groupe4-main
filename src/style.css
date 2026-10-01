@@ -1,1 +1,51 @@
 @import "tailwindcss";
+
+@theme {
+  --color-space: #121212;
+  --color-panel: #1b2026;
+  --color-ink: #e0e0e0;
+  --color-muted: #b8c1cc;
+  --color-line: #485260;
+  --color-earth: #8ed9e8;
+  --color-jupiter: #f2c28c;
+}
+
+@layer base {
+  html { color-scheme: dark; }
+  body { font-family: ui-sans-serif, system-ui, sans-serif; }
+  main { overflow-wrap: anywhere; }
+  a:focus-visible { outline: 3px solid #f3d990; outline-offset: 6px; }
+}
+
+/* Les illustrations restent indépendantes des panneaux de texte opaques. */
+@layer components {
+  .planet-card { --planet-glow: #295b70; }
+  .planet-card-jupiter { --planet-glow: #704529; }
+  .planet-card:hover, .planet-card:focus-visible { border-color: var(--color-earth); }
+  .planet-card-jupiter:hover, .planet-card-jupiter:focus-visible { border-color: var(--color-jupiter); }
+  .planet-stage {
+    min-height: 13.5rem;
+    background: radial-gradient(ellipse at 50% 25%, var(--planet-glow), transparent 72%);
+  }
+  .planet-image { top: -2.5rem; z-index: 1; }
+  .landscape { position: relative; }
+  .landscape::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(var(--color-panel), transparent 65%);
+  }
+  .system-planet {
+    display: block; width: 3rem; aspect-ratio: 1; border-radius: 50%;
+    box-shadow: inset -12px -6px 16px #12121280;
+  }
+  .hero-earth { mask-image: radial-gradient(ellipse, #121212 48%, transparent 72%); }
+}
+
+/* Aucun mouvement nécessaire ; seuls les changements de couleurs sont animés. */
+@media (prefers-reduced-motion: no-preference) {
+  a { transition: background-color 160ms ease, border-color 160ms ease; }
+}
+
+@media (forced-colors: active) {
+  a:focus-visible { outline-color: Highlight; }
+  .planet-card { border-color: LinkText; }
+}
