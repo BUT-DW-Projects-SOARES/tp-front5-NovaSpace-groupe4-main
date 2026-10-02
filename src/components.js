@@ -34,7 +34,7 @@ class SiteHeader extends HTMLElement {
                             </ul>
                         </nav>
 
-                        <form action="/recherche" method="get" role="search" aria-label="Rechercher sur le site" class="header__search">
+                        <form action="/src/pages/recherche.html" method="get" role="search" aria-label="Rechercher sur le site" class="header__search">
                             <label for="recherche" class="sr-only">Rechercher sur le site</label>
                             <input type="search" id="recherche" name="q" placeholder="Ex. : Saturne">
                             <button type="submit">Rechercher</button>
