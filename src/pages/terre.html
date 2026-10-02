@@ -30,8 +30,8 @@
         </p>
         <div class="grid items-center gap-8 lg:grid-cols-[1.5fr_1fr]">
           <div class="min-w-0">
-            <h1 id="intro-titre" class="max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-6xl text-earth">
-              La Terre
+            <h1 id="intro-titre" class="max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-6xl">
+              La Terre<span class="text-earth">.</span>
             </h1>
             <p class="mt-6 max-w-xl text-lg leading-relaxed text-muted">
               Troisième planète à partir du Soleil, la Terre est notre maison dans l’espace. Elle possède une surface rocheuse, une atmosphère et de vastes océans. C’est la seule planète sur laquelle nous connaissons actuellement l’existence de la vie.
@@ -76,7 +76,7 @@
 
       <section id="decouvrir" class="border-t border-line py-10 sm:py-12" aria-labelledby="presentation-terre">
         <h2 id="presentation-terre" class="text-3xl font-semibold tracking-tight sm:text-4xl">
-          La Terre, notre planète bleue
+          A l'intérieur de notre planète
         </h2>
         <figure class="mt-10 overflow-hidden rounded-3xl border border-line bg-panel">
           <img src="../../public/images/terre-structure-interne.jpg" alt="
@@ -172,33 +172,35 @@
       <section class="mt-14 sm:mt-20" aria-labelledby="video-terre">
         <h2 class="mb-3 text-sm font-semibold uppercase tracking-widest text-muted" id="video-terre">Pour aller plus loin en vidéo</h2>
         <div class="mt-10 grid items-center gap-8 md:grid-cols-[1.2fr_1fr]">
-          <div class="overflow-hidden rounded-3xl border border-line">
-            <iframe class="block aspect-video w-full"
-              src="https://www.youtube.com/embed/UaYZieeCX68?si=PpelcDZzGF5P69bm"
-              title="Vidéo du décollage d’Ariane 5 lors du vol V A 226. Durée : 3 minutes 50"
-              aria-describedby="description-video-terre"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-              loading="lazy"
-            ></iframe>
-          </div>
           <div class="rounded-3xl border border-line bg-panel p-6 sm:p-8">
-            <p class="text-sm font-semibold uppercase tracking-widest text-earth">Description</p>
+            <p class="text-sm font-semibold uppercase tracking-widest text-earth">Description de la vidéo</p>
             <p id="description-video-terre" class="mt-3 leading-relaxed text-muted">
-              Voici une vidéo du décollage d’Ariane 5 lors du vol
-              <span aria-label="V A 226">VA226</span>, qui a transporté des satellites pour l’observation de la Terre.
+              Vidéo du décollage d’Ariane 5 lors du vol VA226, d’une durée de 3 minutes 50. Le lanceur a transporté des satellites destinés à l’observation de la Terre.
             </p>
+          </div>
+          <div>
+            <a href="#ressources-terre" class="lien-evitement lien-evitement--video">Passer la vidéo et poursuivre la lecture</a>
+            <div class="overflow-hidden rounded-3xl border border-line">
+              <iframe class="block aspect-video w-full"
+                src="https://www.youtube.com/embed/UaYZieeCX68?si=PpelcDZzGF5P69bm"
+                title="Lecteur vidéo YouTube : décollage d’Ariane 5 lors du vol VA226"
+                aria-describedby="description-video-terre"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="mt-14 border-t border-line pt-10 sm:mt-20" aria-labelledby="ressources-terre">
-        <h2 id="ressources-terre" class="text-xl font-semibold">Poursuivre la découverte</h2>
+      <section id="ressources-terre" class="mt-14 border-t border-line pt-10 sm:mt-20" aria-labelledby="ressources-terre-titre">
+        <h2 id="ressources-terre-titre" class="text-xl font-semibold">Poursuivre la découverte</h2>
         <p class="mt-2 text-muted">
           D’autres informations sur la Terre sont disponibles en anglais sur
           <a href="https://science.nasa.gov/earth/facts/" class="text-earth hover:text-blue-600" target="_blank" rel="noopener noreferrer">
-            le site de la NASA<span class="sr-only"> (nouvelle fenêtre)</span>
+            le site de la NASA<span class="sr-only"> nouvelle fenêtre</span>
           </a>.
         </p>
       </section>
