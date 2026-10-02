@@ -26,17 +26,33 @@ const correspond = (entree, mots) => {
     return mots.every((mot) => texte.includes(mot));
 };
 
-const creerCarte = (entree) => {
+const echapper = (str) =>
+    str.replace(/[&<>'"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[c]));
+
+const surligner = (texte, requete) => {
+    const texteEchappe = echapper(texte);
+    if (!requete.trim()) return texteEchappe;
+
+    const termes = requete.trim().split(/\s+/).filter(mot => mot.length > 1);
+    if (!termes.length) return texteEchappe;
+
+    // Échapper les caractères spéciaux regex des termes
+    const regexTermes = termes.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+    const regex = new RegExp(`(${regexTermes.join('|')})`, 'gi');
+    return texteEchappe.replace(regex, '<mark class="bg-earth/20 text-earth rounded-sm px-1 font-semibold">$1</mark>');
+};
+
+const creerCarte = (entree, requete = "") => {
     const article = document.createElement("article");
     article.className = "rounded-2xl border border-line bg-panel p-5";
 
     const titre = document.createElement("h3");
     titre.className = "text-lg font-semibold tracking-tight";
-    titre.textContent = entree.nom;
+    titre.innerHTML = surligner(entree.nom, requete);
 
     const description = document.createElement("p");
     description.className = "mt-2 leading-relaxed text-muted";
-    description.textContent = entree.desc;
+    description.innerHTML = surligner(entree.desc, requete);
 
     let pied;
     if (entree.page) {
@@ -73,7 +89,7 @@ if (!requete) {
         : `Aucun résultat pour « ${requete} »`;
 
     if (resultats.length) {
-        resultats.forEach((entree) => zone.appendChild(creerCarte(entree)));
+        resultats.forEach((entree) => zone.appendChild(creerCarte(entree, requete)));
     } else {
         const aide = document.createElement("p");
         aide.className = "leading-relaxed text-muted";
