@@ -58,7 +58,8 @@
             <div class="champ">
               <label for="message">Message <span class="champ__mention">- obligatoire</span></label>
               <p id="aide-message" class="champ__aide">Décrivez votre question ou votre remarque. Si elle concerne une page précise, indiquez son titre.</p>
-              <textarea id="message" name="message" rows="8" required aria-describedby="aide-message"></textarea>
+              <p id="limite-message" class="champ__aide">1000 caractères maximum.</p>
+              <textarea id="message" name="message" rows="8" required aria-describedby="aide-message limite-message" maxlength="1000"></textarea>
             </div>
 
             <button type="submit" class="bouton-principal self-start">Envoyer le message <span aria-hidden="true">→</span></button>

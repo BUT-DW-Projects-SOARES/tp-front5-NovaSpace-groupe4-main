@@ -11,21 +11,21 @@
         <link rel="stylesheet" href="/src/style.css" />
         <link rel="icon" type="image/svg+xml" href="/images/earth.svg" />
     </head>
-    <body class="bg-space text-ink antialiased">
+    <body class="bg-space text-ink antialiased flex min-h-[100dvh] flex-col">
         <a href="#contenu" class="lien-evitement">Aller au contenu principal</a>
         <site-header></site-header>
 
         <main
             id="contenu"
             tabindex="-1"
-            class="mx-auto max-w-6xl px-6 pb-16 pt-12 sm:px-10 sm:pb-24 sm:pt-20"
+            class="grow w-full mx-auto max-w-6xl px-6 pb-16 pt-12 sm:px-10 sm:pb-24 sm:pt-20"
         >
             <p class="mb-6 text-sm font-semibold uppercase tracking-widest text-muted">NovaSpace · Navigation</p>
             <h1 class="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">Plan du site<span class="text-earth">.</span></h1>
             <p class="mt-6 max-w-xl text-lg leading-relaxed text-muted">Retrouvez ici toutes les pages de NovaSpace, regroupées par thème.</p>
 
             <nav aria-label="Plan du site" class="mt-12">
-                <ul class="grid gap-6 lg:grid-cols-[1fr_2fr]">
+                <ul class="flex flex-col gap-8 max-w-3xl mx-auto">
                     <li class="plan__groupe">
                         <h2 class="plan__titre">Pages principales</h2>
                         <ul class="plan__liste">
@@ -33,14 +33,11 @@
                             <li><a href="/src/pages/contact.html" class="plan__lien">Contact</a></li>
                         </ul>
                     </li>
-                    <li class="plan__groupe lg:row-span-2">
+                    <li class="plan__groupe">
                         <h2 class="plan__titre">Les planètes</h2>
-                        <ul class="plan__liste sm:grid-cols-2">
+                        <ul class="plan__liste">
                                 <li>
                                     <a href="/src/pages/terre.html" class="plan__lien"><img src="/images/earth.svg" alt="" width="320" height="320" class="plan__pastille">La Terre</a>
-                                </li>
-                                <li>
-                                    <a href="/src/pages/mars.html" class="plan__lien"><span class="plan__pastille" style="background-color: #c48368" aria-hidden="true"></span>Mars</a>
                                 </li>
                                 <li>
                                     <a href="/src/pages/jupiter.html" class="plan__lien"><img src="/images/jupiter.svg" alt="" width="320" height="320" class="plan__pastille">Jupiter</a>
@@ -60,6 +57,14 @@
                                 <li>
                                     <a href="/src/pages/neptune.html" class="plan__lien"><span class="plan__pastille" style="background-color: #668cbf" aria-hidden="true"></span>Neptune</a>
                                 </li>
+                        </ul>
+                    </li>
+                    <li class="plan__groupe">
+                        <h2 class="plan__titre">Informations et annexes</h2>
+                        <ul class="plan__liste">
+                            <li><a href="/src/pages/recherche.html" class="plan__lien">Recherche</a></li>
+                            <li><a href="/src/pages/plan.html" class="plan__lien">Plan du site</a></li>
+                            <li><a href="/src/pages/accessibilite.html" class="plan__lien">Accessibilité</a></li>
                         </ul>
                     </li>
                 </ul>
