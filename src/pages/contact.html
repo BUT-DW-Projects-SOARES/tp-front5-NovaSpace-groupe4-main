@@ -33,15 +33,13 @@
 
             <div class="champ">
               <label for="nom">Nom ou pseudonyme <span class="champ__mention">- facultatif</span></label>
-              <p id="aide-nom" class="champ__aide">Comment souhaitez-vous que nous vous appelions ?</p>
-              <input type="text" id="nom" name="nom" autocomplete="name" aria-describedby="aide-nom">
+              <input type="text" id="nom" name="nom" autocomplete="name">
             </div>
 
             <div class="champ">
               <label for="email">Adresse e-mail <span class="champ__mention">- obligatoire</span></label>
-              <p id="aide-email" class="champ__aide">Indiquez l’adresse à laquelle vous souhaitez recevoir une réponse.</p>
               <p id="format-email" class="champ__aide">Exemple de format : nom@exemple.fr.</p>
-              <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="aide-email format-email">
+              <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="format-email">
             </div>
 
             <div class="champ">
