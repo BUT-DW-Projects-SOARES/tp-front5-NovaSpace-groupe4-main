@@ -57,9 +57,9 @@
       </section>
 
       <section id="planete-bleue" class="border-t border-line py-10 sm:py-12" aria-labelledby="planete-bleue-titre">
-        <h2 id="planete-bleue-titre" class="text-xl font-semibold pb-5">
+        <h3 id="planete-bleue-titre" class="text-xl font-semibold pb-5">
           Pourquoi l’appelle-t-on la planète bleue ?
-        </h2>
+        </h3>
         <p class="max-w-2xl leading-relaxed text-muted">
           Les océans couvrent environ 71 % de la surface terrestre. Depuis l’espace, cette eau donne à notre planète une grande partie de sa couleur bleue.
           Les continents et les nuages complètent ce paysage. L’eau existe sur Terre sous forme liquide, sous forme de glace et sous forme de vapeur dans l’atmosphère.
@@ -67,15 +67,15 @@
       </section>
 
       <section class="border-t border-line py-10 sm:py-12" aria-labelledby="atmosphere">
-        <h2 id="atmosphere" class="text-xl font-semibold pb-5">Une atmosphère qui nous entoure</h2>
+        <h3 id="atmosphere" class="text-xl font-semibold pb-5">Une atmosphère qui nous entoure</h3>
         <p class="max-w-2xl leading-relaxed text-muted">
           L’atmosphère est l’enveloppe de gaz qui entoure la Terre. Elle contient principalement de l’azote et de l’oxygène.
           Elle contribue à réguler les températures et nous protège d’une partie des rayonnements du Soleil.
         </p>
       </section>
 
-      <section id="decouvrir" class="border-t border-line py-10 sm:py-12" aria-labelledby="presentation-terre">
-        <h2 id="presentation-terre" class="text-3xl font-semibold tracking-tight sm:text-4xl">
+      <section id="structure-interne" class="border-t border-line py-10 sm:py-12" aria-labelledby="structure-interne-titre">
+        <h2 id="structure-interne-titre" class="text-3xl font-semibold tracking-tight sm:text-4xl">
           A l'intérieur de notre planète
         </h2>
         <figure class="mt-10 overflow-hidden rounded-3xl border border-line bg-panel">
@@ -85,7 +85,7 @@
       </section>
 
       <section class="border-t border-line py-10 sm:py-12" aria-labelledby="lune">
-        <h2 id="lune" class="text-xl font-semibold pb-5">La Lune, notre satellite naturel</h2>
+        <h3 id="lune" class="text-xl font-semibold pb-5">La Lune, notre satellite naturel</h3>
         <p class="max-w-2xl leading-relaxed text-muted">
           La Terre possède un satellite naturel permanent : la Lune. Un satellite naturel est un astre qui tourne autour d’un autre astre. La Lune joue notamment un rôle dans les marées.
         </p>
@@ -171,29 +171,29 @@
 
       <section class="mt-14 sm:mt-20" aria-labelledby="video-terre">
         <h2 class="mb-3 text-sm font-semibold uppercase tracking-widest text-muted" id="video-terre">Pour aller plus loin en vidéo</h2>
-        <div class="mt-10 grid items-center gap-8 md:grid-cols-[1.2fr_1fr]">
+        <a href="#apres-video-terre" class="lien-evitement">Passer la vidéo</a>
+        <div class="mt-10 grid items-center gap-8 md:grid-cols-[1fr_1.2fr]">
           <div class="rounded-3xl border border-line bg-panel p-6 sm:p-8">
-            <p class="text-sm font-semibold uppercase tracking-widest text-earth">Description de la vidéo</p>
+            <p class="text-sm font-semibold uppercase tracking-widest text-earth">Description</p>
             <p id="description-video-terre" class="mt-3 leading-relaxed text-muted">
-              Vidéo du décollage d’Ariane 5 lors du vol VA226, d’une durée de 3 minutes 50. Le lanceur a transporté des satellites destinés à l’observation de la Terre.
+              Voici une vidéo du décollage d’Ariane 5 lors du vol
+              <span aria-label="V A 226">VA226</span>, qui a transporté des satellites pour l’observation de la Terre.
             </p>
           </div>
-          <div>
-            <a href="#ressources-terre" class="lien-evitement lien-evitement--video">Passer la vidéo et poursuivre la lecture</a>
-            <div class="overflow-hidden rounded-3xl border border-line">
-              <iframe class="block aspect-video w-full"
-                src="https://www.youtube.com/embed/UaYZieeCX68?si=PpelcDZzGF5P69bm"
-                title="Lecteur vidéo YouTube : décollage d’Ariane 5 lors du vol VA226"
-                aria-describedby="description-video-terre"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
-            </div>
+          <div class="overflow-hidden rounded-3xl border border-line">
+            <iframe class="block aspect-video w-full"
+              src="https://www.youtube.com/embed/UaYZieeCX68?si=PpelcDZzGF5P69bm"
+              title="Vidéo du décollage d’Ariane 5 lors du vol V A 226. Durée : 3 minutes 50"
+              aria-describedby="description-video-terre"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
           </div>
         </div>
       </section>
+      <div id="apres-video-terre"></div>
 
       <section id="ressources-terre" class="mt-14 border-t border-line pt-10 sm:mt-20" aria-labelledby="ressources-terre-titre">
         <h2 id="ressources-terre-titre" class="text-xl font-semibold">Poursuivre la découverte</h2>
