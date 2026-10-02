@@ -194,14 +194,36 @@
       </section>
       <div id="apres-video-terre"></div>
 
-      <section id="ressources-terre" class="mt-14 border-t border-line pt-10 sm:mt-20" aria-labelledby="ressources-terre-titre">
-        <h2 id="ressources-terre-titre" class="text-xl font-semibold">Poursuivre la découverte</h2>
-        <p class="mt-2 text-muted">
-          D’autres informations sur la Terre sont disponibles en anglais sur
-          <a href="https://science.nasa.gov/earth/facts/" class="text-earth hover:text-blue-600" target="_blank" rel="noopener noreferrer">
-            le site de la NASA<span class="sr-only"> nouvelle fenêtre</span><span aria-hidden="true">↗</span>
-          </a>.
-        </p>
+      <!-- ── Navigation de fin ── -->
+      <section
+          class="mt-14 sm:mt-20 flex flex-wrap items-center justify-between gap-6 border-t border-line pt-10"
+          aria-labelledby="poursuivre-titre"
+      >
+          <div>
+              <h2 id="poursuivre-titre" class="text-xl font-semibold">
+                  Poursuivre la découverte
+              </h2>
+              <p class="mt-2 text-muted">
+                  D’autres informations sur la Terre sont disponibles en anglais.
+              </p>
+          </div>
+          <div class="flex flex-wrap gap-4">
+              <a
+                  href="/index.html"
+                  class="inline-flex min-h-12 items-center gap-3 rounded-full border border-earth bg-space px-6 py-3 font-semibold text-earth hover:bg-panel focus-visible:bg-panel"
+              >
+                  <span aria-hidden="true">←</span> Retour à l'accueil
+              </a>
+              <a
+                  href="https://science.nasa.gov/earth/facts/"
+                  lang="en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex min-h-12 items-center gap-3 rounded-full border border-line bg-space px-6 py-3 font-semibold text-muted hover:bg-panel hover:text-earth focus-visible:bg-panel"
+              >
+                  NASA Earth Facts<span class="sr-only"> (lien externe)</span> <span aria-hidden="true">↗</span>
+              </a>
+          </div>
       </section>
 
     </main>
