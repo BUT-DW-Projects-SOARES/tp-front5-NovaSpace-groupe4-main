@@ -64,6 +64,7 @@ class SiteFooter extends HTMLElement {
                         <ul class="footer__liens">
                             <li><a href="/src/pages/plan.html" class="focus-visible:outline-2 focus-visible:outline-offset-2">Plan du site</a></li>
                             <li><a href="/src/pages/contact.html" class="focus-visible:outline-2 focus-visible:outline-offset-2">Contact</a></li>
+                            <li><a href="/src/pages/accessibilite.html" class="focus-visible:outline-2 focus-visible:outline-offset-2">Accessibilité : non conforme</a></li>
                         </ul>
                     </nav>
                 </div>
