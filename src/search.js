@@ -1,17 +1,17 @@
 // Recherche statique NovaSpace : lit ?q= de l'URL et filtre un index local.
 
 const INDEX = [
-    { nom: "La Terre", mots: ["terre", "planete bleue", "ocean", "vie"], desc: "La planète où nous vivons : océans, continents et une atmosphère respirable.", page: "/src/pages/terre.html" },
-    { nom: "Jupiter", mots: ["jupiter", "geante gazeuse", "grande tache rouge", "nasa goddard", "satellites"], desc: "La géante gazeuse, plus massive que toutes les autres planètes réunies, et son mystérieuse Grande Tache rouge.", page: "/src/pages/jupiter.html" },
-    { nom: "Mars", mots: ["mars", "planete rouge", "olympus mons", "missions"], desc: "La planète rouge, abrite le plus haut volcan du système solaire et cible des futures missions habitées.", page: "/src/pages/mars.html" },
+    { nom: "La Terre", mots: ["terre", "planete bleue", "ocean", "vie"], desc: "Notre planète bleue où la vie est possible : vastes océans, continents et une atmosphère respirable.", page: "/src/pages/terre.html" },
+    { nom: "Jupiter", mots: ["jupiter", "geante gazeuse", "grande tache rouge", "nasa goddard", "satellites"], desc: "La géante gazeuse, plus massive que toutes les autres planètes réunies, célèbre pour ses satellites et sa mystérieuse Grande Tache rouge observée par la NASA.", page: "/src/pages/jupiter.html" },
+    { nom: "Mars", mots: ["mars", "planete rouge", "olympus mons", "missions"], desc: "La planète rouge, abritant Olympus Mons (le plus haut volcan) et cible de futures missions.", page: "/src/pages/mars.html" },
     { nom: "Mercure", mots: ["mercure", "proche du soleil", "petite", "rapide"], desc: "La plus petite planète, la plus proche du Soleil et la plus rapide en orbite." },
     { nom: "Vénus", mots: ["venus", "plus chaude", "acide sulfurique", "retour"], desc: "La plus chaude du système solaire, sous une épaisse couche de nuages d'acide sulfurique." },
     { nom: "Saturne", mots: ["saturne", "anneaux", "glace", "roche"], desc: "Célèbre pour ses anneaux de glace et de roche, la plus grande planète après Jupiter." },
     { nom: "Uranus", mots: ["uranus", "geante de glace", "incline", "cote"], desc: "Une géante de glace qui évolue sur le côté, avec des anneaux fins et très inclinés." },
-    { nom: "Neptune", mots: ["neptune", "lointaine", "vents", "bleue"], desc: "La planète la plus lointaine, balayée par les vents les plus rapides du système solaire." },
-    { nom: "Contact", mots: ["contact", "equipe", "message"], desc: "Écrire à l'équipe NovaSpace : questions, erreurs, difficultés d'accessibilité.", page: "/src/pages/contact.html" },
-    { nom: "Plan du site", mots: ["plan", "carte", "navigation", "pages"], desc: "Retrouvez toutes les pages du site et les planètes à venir.", page: "/src/pages/plan.html" },
-    { nom: "Accessibilité", mots: ["accessibilite", "rgaa", "wcag", "conformite", "defenseur"], desc: "Déclaration d'accessibilité du site et modalités de contact.", page: "/src/pages/accessibilite.html" },
+    { nom: "Neptune", mots: ["neptune", "lointaine", "vents", "bleue"], desc: "Une planète bleue et lointaine, balayée par les vents les plus rapides du système solaire." },
+    { nom: "Contact", mots: ["contact", "equipe", "message"], desc: "Écrire un message à l'équipe NovaSpace : questions, erreurs, ou difficultés d'accessibilité.", page: "/src/pages/contact.html" },
+    { nom: "Plan du site", mots: ["plan", "carte", "navigation", "pages"], desc: "La carte de navigation pour retrouver toutes les pages et planètes du site.", page: "/src/pages/plan.html" },
+    { nom: "Accessibilité", mots: ["accessibilite", "rgaa", "wcag", "conformite", "defenseur"], desc: "Déclaration de conformité d'accessibilité (RGAA, WCAG) du site et contact du défenseur des droits.", page: "/src/pages/accessibilite.html" },
 ];
 
 // Normalise minuscules + accents pour la comparaison
