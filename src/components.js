@@ -3,9 +3,9 @@ class SiteHeader extends HTMLElement {
         this.innerHTML = `
             <header role="banner" class="header">
                 <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-8 gap-y-3 px-6 py-3 sm:px-10">
-                    <a href="/" class="header__logo">
+                    <a href="/index.html" class="header__logo" aria-label="Retour à l'accueil">
                         <img src="/images/earth.svg" alt="" width="32" height="32" class="h-8 w-8">
-                        <span>Nova<span class="text-earth">Space</span><span class="sr-only"> - Accueil</span></span>
+                        <span aria-hidden="true">Nova<span class="text-earth">Space</span></span>
                     </a>
 
                     <div class="flex w-full flex-wrap items-center gap-x-4 gap-y-3 sm:w-auto">
@@ -52,9 +52,9 @@ class SiteFooter extends HTMLElement {
             <footer role="contentinfo" class="footer">
                 <div class="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-10 sm:flex-row sm:items-end sm:justify-between sm:px-10">
                     <div>
-                        <a href="/" class="header__logo focus-visible:outline-2 focus-visible:outline-offset-2">
+                        <a href="/index.html" class="header__logo focus-visible:outline-2 focus-visible:outline-offset-2" aria-label="Retour à l'accueil">
                             <img src="/images/earth.svg" alt="" width="32" height="32" class="h-8 w-8">
-                            <span>Nova<span class="text-earth">Space</span><span class="sr-only"> - Accueil</span></span>
+                            <span aria-hidden="true">Nova<span class="text-earth">Space</span></span>
                         </a>
                         <p class="mt-4 text-sm text-muted">&copy; 2026 NovaSpace. Tous droits réservés.</p>
                         <p class="mt-1 text-sm text-muted">Site réalisé par le groupe 4 du BUT 3 SW.</p>
