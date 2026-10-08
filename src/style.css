@@ -219,8 +219,16 @@
         outline-offset: 2px;
     }
     /* Signalé seulement après interaction, en complément du message natif du navigateur. */
-    .champ :user-invalid {
+    .champ :user-invalid,
+    .champ [aria-invalid="true"] {
         border-color: #f5a3a3;
+    }
+    .champ__erreur {
+        @apply text-sm font-semibold leading-relaxed;
+        color: #f5a3a3;
+    }
+    .champ__erreur:empty {
+        display: none;
     }
     .bouton-principal {
         @apply inline-flex min-h-12 cursor-pointer items-center gap-3 rounded-full bg-earth px-6 py-3 font-semibold text-space hover:bg-ink;

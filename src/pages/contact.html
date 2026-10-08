@@ -39,7 +39,8 @@
             <div class="champ">
               <label for="email">Adresse e-mail <span class="champ__mention">- obligatoire</span></label>
               <p id="format-email" class="champ__aide">Exemple de format : nom@exemple.fr.</p>
-              <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="format-email">
+              <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="format-email erreur-email">
+              <p id="erreur-email" class="champ__erreur" role="alert"></p>
             </div>
 
             <div class="champ">
@@ -68,5 +69,6 @@
     <site-footer></site-footer>
 
     <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/contact.js"></script>
   </body>
 </html>
