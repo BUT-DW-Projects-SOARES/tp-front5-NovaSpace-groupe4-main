@@ -19,7 +19,7 @@
     <site-header></site-header>
     <main id="contenu-principal" tabindex="-1" class="mx-auto max-w-6xl px-6 pb-16 pt-12 sm:px-10 sm:pb-24 sm:pt-20">
 
-      <section class="relative border-b border-line pb-12 sm:pb-16" aria-labelledby="intro-titre">
+      <section class="relative border-b border-line pb-12 sm:pb-16">
         <nav aria-label="Fil d'Ariane" class="mb-8">
           <a href="/index.html" class="inline-flex items-center gap-2 text-sm font-semibold text-earth underline-offset-4 hover:underline">
             <span aria-hidden="true">←</span> Retour à l'accueil
@@ -43,9 +43,8 @@
         </div>
       </section>
 
-      <section id="decouvrir" class="scroll-mt-8 py-10 sm:py-12" aria-labelledby="presentation-terre">
-        <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-muted">Notre planète</p>
-        <h2 id="presentation-terre" class="text-3xl font-semibold tracking-tight sm:text-4xl">
+      <section id="decouvrir" class="scroll-mt-8 py-10 sm:py-12">
+        <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">
           La Terre, notre planète bleue
         </h2>
         <figure class="mt-10 overflow-hidden rounded-3xl border border-line bg-panel">
@@ -54,28 +53,33 @@
             La Terre, une planète recouverte majoritairement d’eau.
           </figcaption>
         </figure>
-      </section>
 
-      <section id="planete-bleue" class="border-t border-line py-10 sm:py-12" aria-labelledby="planete-bleue-titre">
-        <h3 id="planete-bleue-titre" class="text-xl font-semibold pb-5">
+        <h3 id="planete-bleue" class="scroll-mt-8 border-t border-line pt-10 pb-5 text-xl font-semibold sm:pt-12">
           Pourquoi l’appelle-t-on la planète bleue ?
         </h3>
         <p class="max-w-2xl leading-relaxed text-muted">
           Les océans couvrent environ 71 % de la surface terrestre. Depuis l’espace, cette eau donne à notre planète une grande partie de sa couleur bleue.
           Les continents et les nuages complètent ce paysage. L’eau existe sur Terre sous forme liquide, sous forme de glace et sous forme de vapeur dans l’atmosphère.
         </p>
-      </section>
 
-      <section class="border-t border-line py-10 sm:py-12" aria-labelledby="atmosphere">
-        <h3 id="atmosphere" class="text-xl font-semibold pb-5">Une atmosphère qui nous entoure</h3>
+        <h3 id="atmosphere" class="scroll-mt-8 border-t border-line pt-10 pb-5 text-xl font-semibold sm:pt-12">
+          Une atmosphère qui nous entoure
+        </h3>
         <p class="max-w-2xl leading-relaxed text-muted">
           L’atmosphère est l’enveloppe de gaz qui entoure la Terre. Elle contient principalement de l’azote et de l’oxygène.
           Elle contribue à réguler les températures et nous protège d’une partie des rayonnements du Soleil.
         </p>
+
+        <h3 id="lune" class="scroll-mt-8 border-t border-line pt-10 pb-5 text-xl font-semibold sm:pt-12">
+          La Lune, notre satellite naturel
+        </h3>
+        <p class="max-w-2xl leading-relaxed text-muted">
+          La Terre possède un satellite naturel permanent : la Lune. Un satellite naturel est un astre qui tourne autour d’un autre astre. La Lune joue notamment un rôle dans les marées.
+        </p>
       </section>
 
-      <section id="structure-interne" class="border-t border-line py-10 sm:py-12" aria-labelledby="structure-interne-titre">
-        <h2 id="structure-interne-titre" class="text-3xl font-semibold tracking-tight sm:text-4xl">
+      <section id="structure-interne" class="scroll-mt-8 border-t border-line py-10 sm:py-12">
+        <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">
           A l'intérieur de notre planète
         </h2>
         <figure class="mt-10 overflow-hidden rounded-3xl border border-line bg-panel">
@@ -83,16 +87,9 @@
         </figure>
       </section>
 
-      <section class="border-t border-line py-10 sm:py-12" aria-labelledby="lune">
-        <h3 id="lune" class="text-xl font-semibold pb-5">La Lune, notre satellite naturel</h3>
-        <p class="max-w-2xl leading-relaxed text-muted">
-          La Terre possède un satellite naturel permanent : la Lune. Un satellite naturel est un astre qui tourne autour d’un autre astre. La Lune joue notamment un rôle dans les marées.
-        </p>
-      </section>
-
       <section class="mt-6 rounded-3xl border border-line bg-panel p-6 sm:mt-10 sm:p-10">
-        <h2 class="mb-3 text-sm font-semibold uppercase tracking-widest" id="caracteristiques-terre">Caractéristiques de la planète</h2>
-        <div class="mt-8 overflow-x-auto" role="region" aria-labelledby="caracteristiques-terre">
+        <h2 class="mb-3 text-sm font-semibold uppercase tracking-widest">Caractéristiques de la planète</h2>
+        <div class="mt-8 overflow-x-auto">
           <table class="w-full min-w-3xl text-left">
 
             <thead>
@@ -168,7 +165,7 @@
         </div>
       </section>
 
-      <section class="mt-14 sm:mt-20" aria-labelledby="video-terre">
+      <section class="mt-14 sm:mt-20">
         <h2 class="mb-3 text-sm font-semibold uppercase tracking-widest text-muted" id="video-terre">Pour aller plus loin en vidéo</h2>
         <a href="#apres-video-terre" class="lien-evitement">Passer la vidéo</a>
         <div class="mt-10 grid items-center gap-8 md:grid-cols-[1fr_1.2fr]">
@@ -194,36 +191,14 @@
       </section>
       <div id="apres-video-terre"></div>
 
-      <!-- ── Navigation de fin ── -->
-      <section
-          class="mt-14 sm:mt-20 flex flex-wrap items-center justify-between gap-6 border-t border-line pt-10"
-          aria-labelledby="poursuivre-titre"
-      >
-          <div>
-              <h2 id="poursuivre-titre" class="text-xl font-semibold">
-                  Poursuivre la découverte
-              </h2>
-              <p class="mt-2 text-muted">
-                  D’autres informations sur la Terre sont disponibles en anglais.
-              </p>
-          </div>
-          <div class="flex flex-wrap gap-4">
-              <a
-                  href="/index.html"
-                  class="inline-flex min-h-12 items-center gap-3 rounded-full border border-earth bg-space px-6 py-3 font-semibold text-earth hover:bg-panel focus-visible:bg-panel"
-              >
-                  <span aria-hidden="true">←</span> Retour à l'accueil
-              </a>
-              <a
-                  href="https://science.nasa.gov/earth/facts/"
-                  lang="en"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="inline-flex min-h-12 items-center gap-3 rounded-full border border-line bg-space px-6 py-3 font-semibold text-muted hover:bg-panel hover:text-earth focus-visible:bg-panel"
-              >
-                  NASA Earth Facts<span class="sr-only"> (lien externe)</span> <span aria-hidden="true">↗</span>
-              </a>
-          </div>
+      <section id="ressources-terre" class="mt-14 border-t border-line pt-10 sm:mt-20">
+        <h2 class="text-xl font-semibold">Poursuivre la découverte</h2>
+        <p class="mt-2 text-muted">
+          D’autres informations sur la Terre sont disponibles en anglais sur
+          <a href="https://science.nasa.gov/earth/facts/" class="text-earth hover:text-blue-600" target="_blank" rel="noopener noreferrer">
+            le site de la NASA<span class="sr-only"> nouvelle fenêtre</span><span aria-hidden="true">↗</span>
+          </a>.
+        </p>
       </section>
 
     </main>
